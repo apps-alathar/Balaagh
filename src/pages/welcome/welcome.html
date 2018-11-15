@@ -2,14 +2,19 @@
 <ion-content padding id="Welcome">
   
   <img src="../../assets/imgs/balaagh_logo.png" class="logo"/>
-  <h1>Welcome to Balaagh!</h1>
+  <h1>Balaagh!</h1>
 
-  <button ion-button block color="danger" class="marginTop" (click)="login()" large round>
-      <ion-icon name="user"></ion-icon> 
-    Login
+  <button ion-button block color="default" class="tallButton" (click)="login()" large>
+    <ion-icon name="user"></ion-icon> 
+  View Announcements
+</button>
+
+  <button ion-button block icon-start color="light" class="marginTop" (click)="login()">
+      <ion-icon name="log-in"></ion-icon> 
+    Admin Login to share announcements
   </button>
-  <button ion-button block color="dark" (click)="signup()" round>
-      <ion-icon name="add"></ion-icon>  
-    Signup
+  <button ion-button block icon-start color="dark" (click)="signup()">
+      <ion-icon name="person-add"></ion-icon>  
+    Admin Signup to share announcements
   </button>
 </ion-content>

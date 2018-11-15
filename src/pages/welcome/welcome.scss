@@ -4,14 +4,18 @@ page-welcome {
     h1 {
         font-size: 60px;
         margin-top: 0px;
-        color: color($colors, light);
-        float: right;
+        margin-left: 10px;
+        color: color($colors, gold);
+    }
+    .tallButton {
+        margin-top: 50px;
+        height: 100px;
     }
     .marginTop{
         margin-top:50px;
     }
     .logo{
-        height: 350px;
+        height: 250px;
     }
 }
 }
