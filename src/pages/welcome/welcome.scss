@@ -1,0 +1,17 @@
+page-welcome {
+#Welcome{
+    background: color($colors, energy);
+    h1 {
+        font-size: 60px;
+        margin-top: 0px;
+        color: color($colors, light);
+        float: right;
+    }
+    .marginTop{
+        margin-top:50px;
+    }
+    .logo{
+        height: 350px;
+    }
+}
+}
