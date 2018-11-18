@@ -1,12 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <img src="../../assets/imgs/balaagh_logo.png" class="navbarLogo" />
+    <img src="assets/imgs/balaagh_logo.png" class="navbarLogo" />
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Balaagh!</h2>
+  <h2>Welcome {{userDetails.name}}</h2>
+  <h3>{{userDetails.email}}</h3>
 
   <ion-card>
       <ion-card-header>
