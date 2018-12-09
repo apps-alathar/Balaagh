@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
 
 @Component({
   selector: 'page-about',
@@ -7,8 +7,14 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public app: App) {
 
+  }
+
+  logout(){
+    //API Token logout
+    const root = this.app.getRootNav();
+    root.popToRoot();
   }
 
 }

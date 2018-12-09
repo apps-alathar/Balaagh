@@ -5,16 +5,16 @@
   <h1>Balaagh!</h1>
   <h3>A clear notification.</h3>
 
-  <button ion-button block color="default" class="tallButton" (click)="login()" large>
-    <ion-icon name="user"></ion-icon> 
-  View Announcements
-</button>
+  <button ion-button block color="default" class="tallButton" (click)="home()" large>
+   <ion-icon name="user"></ion-icon> 
+     View Announcements
+   </button>
 
   <button ion-button block icon-start color="light" class="marginTop" (click)="login()">
       <ion-icon name="log-in"></ion-icon> 
     Admin Login
   </button>
-  <button ion-button block icon-start color="dark" (click)="signup()">
+  <button ion-button block icon-start color="dark" (click)="signup()" [disabled]="true">
       <ion-icon name="person-add"></ion-icon>  
     Admin Signup
   </button>

@@ -1,7 +1,19 @@
 .navbarLogo{
-    height: 80px;
+    height: 36px;
+    padding: 0px;
     float: left;
-    margin-left: 10px;
+}
+
+ion-title {
+    
+    top: 0px;
+    left: 0;
+    padding: 10px 0px 1px;
+    float: right;
+}
+
+.navbarlogout{
+    float: right;
 }
 page-home {
 

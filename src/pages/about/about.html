@@ -1,10 +1,25 @@
 <ion-header>
     <ion-navbar>
-      <img src="assets/imgs/balaagh_logo.png" class="navbarLogo" />
-      <ion-title>About</ion-title>
+      
+      <button ion-button clear (click)="logout()">
+            <img src="assets/imgs/balaagh_logo.png" class="navbarLogo" />
+        </button>
+        <ion-title>About Balaagh</ion-title>  
     </ion-navbar>
   </ion-header>
 
-<ion-content padding>
+  <ion-content class="card-background-page" padding>
 
-</ion-content>
+    <ion-card>
+      <img src="assets/imgs/author_adil.jpg"/>
+      <div class="card-title">Adil Aziz</div>
+      <div class="card-subtitle">Programmer Prodigy</div>
+    </ion-card>
+  
+    <ion-card>
+      <img src="assets/imgs/author_athar.jpg"/>
+      <div class="card-title">Athar Aziz</div>
+      <div class="card-subtitle">Student of Knowledge</div>
+    </ion-card>
+  
+  </ion-content>

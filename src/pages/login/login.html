@@ -1,14 +1,26 @@
-<ion-content padding>
+<ion-header>
+  <ion-navbar>
+    <ion-title>Manage Your Posts</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding id="login-content">
+
   <ion-list>
 
-    <ion-item>
+      <ion-note item-end>
+          You don't have to login if you just want to view the announcements. If you are the administrator of this app, please feel free to login to manage your posts.
+      </ion-note>
+ 
+      <ion-item>
       <ion-label fixed>Username</ion-label>
       <ion-input type="text" value="" [(ngModel)]="userData.username"></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label fixed>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+      <ion-input type="password" [(ngModel)]="userData.password" (keyup.enter)="login()"></ion-input>
     </ion-item>
   
     <button ion-button block color="secondary" (click)="login()">Login</button>

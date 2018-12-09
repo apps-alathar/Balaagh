@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { LoginPage } from '../login/login';
 import { SignupPage } from '../signup/signup';
+import { TabsPage } from '../tabs/tabs';
 /**
  * Generated class for the WelcomePage page.
  *
@@ -24,6 +25,10 @@ export class WelcomePage {
     console.log('ionViewDidLoad WelcomePage');
   }
 
+home(){
+  this.navCtrl.push(TabsPage);
+}
+  
 login(){
   this.navCtrl.push(LoginPage);
 }

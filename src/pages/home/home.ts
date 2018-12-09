@@ -11,16 +11,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public app: App) {
 
-    if (localStorage.getItem("balaaghData") != "undefined")
-    {
-      const data = JSON.parse(localStorage.getItem("balaaghData"));
-      console.log(data.userData);
-      this.userDetails = data.userData;
-    }
-    else
-    {
-      this.userDetails = {"username":"unknown", "name": "Unknown", "email": "unknown@error.com" }
-    }
+    //this.userDetails = {"username":"", "name": "", "email": "" };
 
   }
 

@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button clear (click)="logout()">
+      <img src="assets/imgs/balaagh_logo.png" class="navbarLogo" />
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header>
+      SETTINGS
+    </ion-list-header>
+    <div>
+      Since Balaagh is a free app, any community member, masjid, team or business can be approved to post
+      announcements. This may be too many announcements for you to follow.
+      So, here is your choice to view only those postings from the contributors that you like.
+    </div>
+    <div padding>
+      If you toggle them off here you will not see all of their postings and announcements.
+    </div>
+
+
+    <ion-item-group>
+      <ion-item-divider color="light">Members</ion-item-divider>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/user_athar.png">
+        </ion-avatar>
+        <ion-label>Athar Aziz
+          <div>
+            <h3>He is a member and representative of blah blah blah community and is reliable</h3>
+          </div>
+        </ion-label>
+        <ion-toggle [(ngModel)]="athar"></ion-toggle>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="light">Masajid</ion-item-divider>
+
+      <ion-item>
+        <ion-avatar item-start>
+
+        </ion-avatar>
+        <ion-label>Masjid Al-Nur
+          <div>
+            <h3>Mechanicsburg, PA</h3>
+          </div>
+        </ion-label>
+        <ion-toggle [(ngModel)]="alnur"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar item-start>
+
+        </ion-avatar>
+        <ion-label>Masjid Al-Hikmeh
+          <div>
+            <h3>Mechanicsburg, PA</h3>
+          </div>
+        </ion-label>
+        <ion-toggle [(ngModel)]="alhikmen"></ion-toggle>
+      </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+
+</ion-content>
