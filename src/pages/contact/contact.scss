@@ -1,3 +1,25 @@
 page-contact {
 
+    .card-background-page {
+
+        ion-card {
+          position: relative;
+          text-align: center;
+          background-color: navy;
+        }
+        ion-card-header {
+          padding: 10px 0px 1px;
+          color: #fff;
+          font-size: 2.0em;
+        }
+
+        ion-card-content {
+          color: #fff;
+        }
+
+        .ion-item-para {
+            padding-bottom: 10px;
+        }
+
+      }
 }
