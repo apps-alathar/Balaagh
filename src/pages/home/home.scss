@@ -1,20 +1,23 @@
-.navbarLogo{
-    height: 36px;
-    padding: 0px;
-    float: left;
-}
+#topNavbar {
 
-ion-title {
+    .navbarLogo{
+        height: 36px;
+        padding: 0px;
+        float: left;
+    }
     
-    top: 0px;
-    left: 0;
-    padding: 10px 0px 1px;
-    float: right;
-}
-
-.navbarlogout{
-    float: right;
+    ion-title {
+        top: 0px;
+        left: 0;
+        padding: 10px 0px 1px;
+        float: right;
+    }
+    
 }
 page-home {
+
+    #feedText {
+        min-height: 75px;
+    }
 
 }

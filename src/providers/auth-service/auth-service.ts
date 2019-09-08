@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-let authApiURL = "http://atharaziz.com/balaagh/api/";
+let authApiURL = "http://aaziz.alathar.org/balaagh/api/";
 
 /*
   Generated class for the AuthServiceProvider provider.
@@ -16,7 +16,7 @@ let authApiURL = "http://atharaziz.com/balaagh/api/";
 export class AuthServiceProvider {
 
   constructor(public http: HttpClient) {
-    console.log('Hello AuthServiceProvider Provider');
+    console.log('Balaagh, Your Providers Are Working');
   }
 
   postData(credentials, type){

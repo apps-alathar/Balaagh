@@ -1,6 +1,5 @@
-<ion-header>
+<ion-header id="topNavbar">
   <ion-navbar>
-
     <button ion-button clear (click)="logout()">
       <img src="assets/imgs/balaagh_logo.png" class="navbarLogo" />
     </button>
@@ -35,7 +34,7 @@
             <h3>He is a member and representative of blah blah blah community and is reliable</h3>
           </div>
         </ion-label>
-        <ion-toggle [(ngModel)]="athar"></ion-toggle>
+        <ion-toggle disabled checked></ion-toggle>
       </ion-item>
     </ion-item-group>
 
@@ -51,7 +50,7 @@
             <h3>Mechanicsburg, PA</h3>
           </div>
         </ion-label>
-        <ion-toggle [(ngModel)]="alnur"></ion-toggle>
+        <ion-toggle [(ngModel)]="alnur" disabled></ion-toggle>
       </ion-item>
 
       <ion-item>
@@ -63,7 +62,7 @@
             <h3>Mechanicsburg, PA</h3>
           </div>
         </ion-label>
-        <ion-toggle [(ngModel)]="alhikmen"></ion-toggle>
+        <ion-toggle [(ngModel)]="alhikmeh" disabled></ion-toggle>
       </ion-item>
 
     </ion-item-group>

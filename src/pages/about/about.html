@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header id="topNavbar">
     <ion-navbar>
       
       <button ion-button clear (click)="logout()">
@@ -6,30 +6,23 @@
         </button>
         <ion-title>About</ion-title>  
     </ion-navbar>
-  </ion-header>
+</ion-header>
 
-  <ion-content>
-
-<ion-grid fixed>
-  <ion-row>
-    <ion-col size="6">
-
+<ion-content>
 
 <ion-grid fixed>
   <ion-row>
-    <ion-col size="12" size-sm="12" size-md="6">
-
-
-        <ion-card>
+    <ion-col size="6" size-md="12">
+      <ion-card>
             <ion-card-header>
-              <ion-card-title>About Balaagh</ion-card-title>
+              <ion-card-title color="primary">What is Balaagh?</ion-card-title>
             </ion-card-header>
           
             <ion-card-content>
 
-                <ion-list>
-                    <ion-list-header>
-                        <ion-label>Benefits of Balaagh</ion-label>
+                <ion-list text-wrap> 
+                    <ion-list-header color="primary">
+                        <ion-label><ion-icon name="thumbs-up" item-start></ion-icon> Benefits of Balaagh</ion-label>
                       </ion-list-header>
                 
                     <ion-item>
@@ -45,39 +38,61 @@
                       <ion-label>The One-stop for all Muslim events in Central PA</ion-label>
                     </ion-item>
                     <ion-item>
-                      <ion-label>Anyone can post an upcoming event (* Registration Required)</ion-label>
-                    </ion-item>
-                    <ion-item>
-                      <ion-label></ion-label>
+                      <ion-label>Anyone can post an upcoming event (Registration Required *)</ion-label>
                     </ion-item>
                   </ion-list>
                 
 
             </ion-card-content>
-          </ion-card>
+      </ion-card>
+    </ion-col>
 
-          <!-- List of Text Items -->
-  
+    <ion-col size="6" size-md="12">
+
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="primary">Want to help Balaagh?</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+
+            <ion-list text-wrap> 
+                <ion-list-header color="primary">
+                  <ion-label><ion-icon name="help-buoy" item-start></ion-icon> Donate to Balaagh</ion-label>
+                  </ion-list-header>
+
+                  <ion-item>
+                    <ion-icon name="hand" item-start></ion-icon>
+                    A project like this takes a lot of hardwork and dedication. 
+                    We request your support and patience while we develop this tool for the entire community. 
+                    We ask that you make DUA (i.e., say a prayer) for all the developers that spent countless number of hours making this project a success.
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-icon name="bug" item-start></ion-icon>
+                    Please report any bugs you find on the 'Contacts' tab.
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-icon name="walk" item-start></ion-icon>
+                    Follow us to a Masjid near you or volunteer at an event.
+                  </ion-item>
+          
+              </ion-list>
+            
+
+        </ion-card-content>
+        </ion-card>
+
+
+
 
     </ion-col>
+
   </ion-row>
 </ion-grid>
 
 
-
-        <ion-list>
-            <ion-list-header>Follow us to a Masjid near you or volunteer at an event.</ion-list-header>
-            <ion-item>
-              <ion-icon name="speedometer" item-start></ion-icon>
-              Donate to Balaagh
-            </ion-item>
-          </ion-list>
-    
-    </ion-col>
-    <ion-col size="6"></ion-col>
-  </ion-row>
-</ion-grid>
-
-
-    </ion-content>
+</ion-content>
     

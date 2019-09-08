@@ -22,7 +22,7 @@ export class WelcomePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WelcomePage');
+    console.log('Welcome Page Loaded');
   }
 
 home(){

@@ -18,6 +18,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from  '../providers/auth-service/auth-service';
+import { MomentModule } from 'angular2-moment';
+import { LinkyModule } from 'angular-linky';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ import { AuthServiceProvider } from  '../providers/auth-service/auth-service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    MomentModule,
+    LinkyModule,
     HttpClientModule
   ],
   bootstrap: [IonicApp],

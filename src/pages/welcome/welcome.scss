@@ -1,19 +1,54 @@
 page-welcome {
+
+$break-small: 320px;
+$break-large: 1200px;
+
+
+#home {
+    background: color($colors, light);
+    .centerLogo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        }
+
+    h1 {
+        color: color($colors, complement);
+        font-size: 10vw;
+        text-align: center;        
+    }
+    h3 {
+        color: color($colors, primary);
+        font-size: 5vw;
+        text-align: center;        
+    }
+    .tallButton {
+        margin-top: 5vw;
+        font-size: 4vw;
+        margin-bottom: 5%;
+    }
+    .shortButton {
+        margin-bottom: 2vw;
+        padding: 2vw;
+        font-size: 2vw;
+    }
+    ion-icon {
+        font-size: 200%;
+    }
+}
+
 #Welcome{
     background: color($colors, energy);
     h1 {
         font-size: 60px;
         margin-top: 0px;
         margin-left: 10px;
-        color: color($colors, gold);
+        color: color($colors, complement);
     }
     h3 {
-        color: color($colors, gold);
+        color: color($colors, complement);
         margin-left: 10px;
-    }
-    .tallButton {
-        margin-top: 50px;
-        height: 100px;
     }
     .marginTop{
         margin-top:50px;

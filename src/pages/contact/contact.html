@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header id="topNavbar">
     <ion-navbar>
       <ion-title>Contact</ion-title>
       <button ion-button clear (click)="logout()">
@@ -12,7 +12,7 @@
 
     <ion-grid fixed>
       <ion-row>
-        <ion-col size="12" size-sm="12" size-md="6">
+        <ion-col size="12" size-md="6">
           
           <ion-card>
 
@@ -42,8 +42,10 @@
             </ion-item>
           
           </ion-card>
-  
 
+        </ion-col>
+
+        <ion-col size="12" size-md="6">
 
           <ion-card>
 
@@ -60,15 +62,12 @@
             
             <ion-item text-wrap>
               <ion-icon name="laptop" item-start large></ion-icon>
-              <p class="ion-item-para">
-                The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-              </p>
               <h2>Software Analyst, Architect and Developer</h2>
               <p>Balaagh Inceptionist (bi-iznillah)</p>
               <p>apps-alathar@gmail.com</p>
             </ion-item>
           
-            <ion-item>
+            <ion-item text-wrap>
               <ion-icon name="microphone" item-start large ></ion-icon>
               <h2>Part-time Arabic Teacher and Reminder</h2>
               <p>Central Pennsylvania</p>
@@ -76,7 +75,6 @@
             </ion-item>
           
           </ion-card>
-
 
         </ion-col>
       </ion-row>

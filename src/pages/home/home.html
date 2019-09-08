@@ -1,55 +1,69 @@
-<ion-header>
+<ion-header id="topNavbar">
   <ion-navbar>
-      <ion-title>Announcements</ion-title>
-      <button ion-button clear (click)="logout()">
-          <img src="assets/imgs/balaagh_logo.png" class="navbarLogo" />
-      </button>
+    <ion-title>Announcements</ion-title>
+    <button ion-button clear (click)="logout()">
+      <img src="assets/imgs/balaagh_logo.png" class="navbarLogo" />
+    </button>
   </ion-navbar>
-  
-</ion-header>
 
+</ion-header>
 
 <ion-content padding>
   <h2>Welcome</h2>
-  
 
-  <ion-card>
-
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/imgs/user_athar.png">
-      </ion-avatar>
-      <h2>Athar Aziz</h2>
-      <p>November 25, 2018</p>
-    </ion-item>
-
-    <ion-card-content>
-      <p>Welcome! The first announcement would of course be that announcement for launch of Balaagh app itself :).
-        Enjoy!</p>
-    </ion-card-content>
-
+  <ion-grid>
     <ion-row>
-      <ion-col>
-        <button ion-button icon-start clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-start clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
-      </ion-col>
+
+      <ion-card col-md-12 col-lg-6 col-xl-4 *ngFor="let item of dataSet">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/user_athar.png">
+          </ion-avatar>
+          <h2>Athar Aziz</h2>
+          <p [innerHTML]="item.created_dt | amTimeAgo"></p>
+        </ion-item>
+
+        <ion-card-content>
+          <p><strong>{{ item.event_dt | date }} <br/> {{item.event_dt | amTimeAgo}}</strong></p>
+          <p id="feedText" [innerHTML]="item.feed | linky"></p>
+
+          <ion-grid id="bottomClicks">
+            <ion-row>
+              <ion-col>
+                <button ion-button icon-start clear small>
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  <div>Like
+                    <ion-badge color="secondary">0</ion-badge>
+                  </div>
+                </button>
+              </ion-col>
+
+              <ion-col>
+                <button ion-button icon-start clear small>
+                  <ion-icon name="bookmark"></ion-icon>
+                  <div>RSVP
+                    <ion-badge color="secondary">0</ion-badge>
+                  </div>
+                </button>
+              </ion-col>
+
+              <ion-col>
+                <button ion-button icon-start clear small>
+                  <ion-icon name="share"></ion-icon>
+                  <div>Share
+                    <ion-badge color="secondary">0</ion-badge>
+                  </div>
+                </button>
+              </ion-col>
+
+            </ion-row>
+          </ion-grid>
+
+        </ion-card-content>
+
+      </ion-card>
+
     </ion-row>
-
-  </ion-card>
-
-
+  </ion-grid>
 
 </ion-content>
