@@ -16,6 +16,9 @@
 
       <ion-card col-md-12 col-lg-6 col-xl-4 *ngFor="let item of dataSet">
         <ion-item>
+            <div style="float:right;"><strong>{{ item.event_dt | date }} </strong></div>
+            <br />
+            <div style="float:right;"><strong>{{ item.event_dt | date:'shortTime' }} </strong></div>
           <ion-avatar item-start>
             <img src="assets/imgs/user_athar.png">
           </ion-avatar>
@@ -24,7 +27,7 @@
         </ion-item>
 
         <ion-card-content>
-          <p><strong>{{ item.event_dt | date }} <br/> {{item.event_dt | amTimeAgo}}</strong></p>
+          
           <p id="feedText" [innerHTML]="item.feed | linky"></p>
 
           <ion-grid id="bottomClicks">
@@ -42,15 +45,6 @@
                 <button ion-button icon-start clear small>
                   <ion-icon name="bookmark"></ion-icon>
                   <div>RSVP
-                    <ion-badge color="secondary">0</ion-badge>
-                  </div>
-                </button>
-              </ion-col>
-
-              <ion-col>
-                <button ion-button icon-start clear small>
-                  <ion-icon name="share"></ion-icon>
-                  <div>Share
                     <ion-badge color="secondary">0</ion-badge>
                   </div>
                 </button>
