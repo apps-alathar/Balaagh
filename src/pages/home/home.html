@@ -9,30 +9,34 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome</h2>
+  <h2>Welcome to Balaagh!</h2>
+
+  <ion-item-divider color="secondary">
+    <ion-label>
+      Scheduled Today
+    </ion-label>
+  </ion-item-divider>
 
   <ion-grid>
     <ion-row>
 
-      <ion-card col-md-12 col-lg-6 col-xl-4 *ngFor="let item of dataSet">
+      <ion-card col-md-12 col-lg-6 *ngFor="let item of todaySet">
         <ion-item>
-            <div style="float:right;"><strong>{{ item.event_dt | date }} </strong></div>
-            <br />
-            <div style="float:right;"><strong>{{ item.event_dt | date:'shortTime' }} </strong></div>
+          <div style="float:right;"><strong>{{ item.event_dt | date }} </strong></div>
+          <br />
+          <div style="float:right;"><strong>{{ item.event_dt | date:'shortTime' }} </strong></div>
           <ion-avatar item-start>
-            <img src="assets/imgs/user_athar.png">
+            <img src="assets/imgs/user_adil.png">
           </ion-avatar>
-          <h2>Athar Aziz</h2>
-          <p [innerHTML]="item.created_dt | amTimeAgo"></p>
         </ion-item>
 
         <ion-card-content>
-          
-          <p id="feedText" [innerHTML]="item.feed | linky"></p>
+
+          <p style="font-weight: bold;" id="feedText" [innerHTML]="item.feed | linky"></p>
 
           <ion-grid id="bottomClicks">
             <ion-row>
-              <ion-col>
+              <ion-col col-4>
                 <button ion-button icon-start clear small>
                   <ion-icon name="thumbs-up"></ion-icon>
                   <div>Like
@@ -41,7 +45,7 @@
                 </button>
               </ion-col>
 
-              <ion-col>
+              <ion-col col-4>
                 <button ion-button icon-start clear small>
                   <ion-icon name="bookmark"></ion-icon>
                   <div>RSVP
@@ -50,6 +54,15 @@
                 </button>
               </ion-col>
 
+              <ion-col col-4>
+                <button ion-button icon-start clear small>
+                  <div>More
+                      <ion-badge color="secondary"><ion-icon name="arrow-round-forward"></ion-icon></ion-badge>
+                  </div>
+                </button>
+              </ion-col>
+
+
             </ion-row>
           </ion-grid>
 
@@ -57,6 +70,83 @@
 
       </ion-card>
 
+     <ion-item *ngIf="nothingToday">
+      <ion-label>
+        <strong>No scheduled events today</strong>
+      </ion-label>
+    </ion-item>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-item-divider color="default">
+    <ion-label>
+      Upcoming
+    </ion-label>
+  </ion-item-divider>
+
+
+  <ion-grid>
+    <ion-row>
+
+        <ion-card col-md-12 col-lg-6 *ngFor="let item of upcomingSet">
+            <ion-item>
+              <div style="float:right;"><strong>{{ item.event_dt | date }} </strong></div>
+              <br />
+              <div style="float:right;"><strong>{{ item.event_dt | date:'shortTime' }} </strong></div>
+              <ion-avatar item-start>
+                <img src="assets/imgs/user_adil.png">
+              </ion-avatar>
+            </ion-item>
+    
+            <ion-card-content>
+    
+              <p style="font-weight: bold;" id="feedText" [innerHTML]="item.feed | linky"></p>
+    
+              <ion-grid id="bottomClicks">
+                <ion-row>
+                  <ion-col col-4>
+                    <button ion-button icon-start clear small>
+                      <ion-icon name="thumbs-up"></ion-icon>
+                      <div>Like
+                        <ion-badge color="secondary">0</ion-badge>
+                      </div>
+                    </button>
+                  </ion-col>
+    
+                  <ion-col col-4>
+                    <button ion-button icon-start clear small>
+                      <ion-icon name="bookmark"></ion-icon>
+                      <div>RSVP
+                        <ion-badge color="secondary">0</ion-badge>
+                      </div>
+                    </button>
+                  </ion-col>
+    
+                  <ion-col col-4>
+                    <button ion-button icon-start clear small>
+                      <div>More
+                          <ion-badge color="secondary">
+                              <ion-icon name="arrow-dropright-circle"></ion-icon>
+                          </ion-badge>
+                      </div>
+                    </button>
+                  </ion-col>
+    
+    
+                </ion-row>
+              </ion-grid>
+    
+            </ion-card-content>
+    
+          </ion-card>
+    
+      <ion-item *ngIf="nothingUpcoming">
+        <ion-label>
+          <strong>No upcoming events setup</strong>
+        </ion-label>
+      </ion-item>
+  
     </ion-row>
   </ion-grid>
 

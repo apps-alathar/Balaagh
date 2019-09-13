@@ -9,22 +9,18 @@
 
 <ion-content padding>
 
-  <ion-list>
+  <ion-list text-wrap>
     <ion-list-header>
-      SETTINGS
-    </ion-list-header>
-    <div>
       Since Balaagh is a free app, any community member, masjid, team or business can be approved to post
       announcements. This may be too many announcements for you to follow.
       So, here is your choice to view only those postings from the contributors that you like.
-    </div>
-    <div padding>
-      If you toggle them off here you will not see all of their postings and announcements.
-    </div>
-
+      <div padding>
+        If you toggle them off here you will not see all of their postings and announcements.
+      </div>
+    </ion-list-header>
 
     <ion-item-group>
-      <ion-item-divider color="light">Members</ion-item-divider>
+      <ion-item-divider color="secondary">Members</ion-item-divider>
       <ion-item>
         <ion-avatar item-start>
           <img src="assets/imgs/user_athar.png">
@@ -39,7 +35,7 @@
     </ion-item-group>
 
     <ion-item-group>
-      <ion-item-divider color="light">Masajid</ion-item-divider>
+      <ion-item-divider color="secondary">Masajid</ion-item-divider>
 
       <ion-item>
         <ion-avatar item-start>
@@ -66,6 +62,37 @@
       </ion-item>
 
     </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="secondary">Organizations</ion-item-divider>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/user_swimgroup.png">
+        </ion-avatar>
+        <ion-label>Swimming Group
+          <div>
+            <h3>Mechanicsburg, PA</h3>
+          </div>
+        </ion-label>
+        <ion-toggle [(ngModel)]="alswimming" checked disabled></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/user_alhuda.png">
+        </ion-avatar>
+        <ion-label>Al-Huda School
+          <div>
+            <h3>Camp Hill, PA</h3>
+          </div>
+        </ion-label>
+        <ion-toggle [(ngModel)]="alhuda" disabled></ion-toggle>
+      </ion-item>
+
+    </ion-item-group>
+
+
   </ion-list>
 
 </ion-content>
