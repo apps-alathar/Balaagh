@@ -25,7 +25,7 @@ export class AuthServiceProvider {
       let headers = new HttpHeaders();
       this.http.post(authApiURL + type, JSON.stringify(credentials), {headers: headers})
       .subscribe(response => {
-          console.log(response);
+          //console.log(response);
           resolve(response);
       }, (error) => {
         reject(error);

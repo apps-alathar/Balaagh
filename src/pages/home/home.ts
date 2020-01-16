@@ -13,11 +13,11 @@ export class HomePage {
   public responseData : any;
   public todaySet : any;
   public upcomingSet : any;
+  public pastSet : any;
   public nothingToday : any;
   public nothingUpcoming : any;
+  public nothingPast : any;
   
-  
-
   userPostData = {"user_id":"", "token":""}
 
   constructor(public navCtrl: NavController, public app: App, public authServiceProvider: AuthServiceProvider) {
@@ -37,25 +37,29 @@ export class HomePage {
     this.authServiceProvider.postData(this.userPostData, "feed").then((result) => {
       this.responseData = result;
       if (this.responseData.feedData){
-        this.todaySet = this.responseData.feedData;
-        this.todaySet = this.todaySet.filter(function (item) {
+        this.todaySet = this.responseData.feedData.filter(function (item) {
           var itemDate = pipe.transform(item.event_dt, "yyyyMMdd");
           return itemDate == todaysDate;
         });
 
-        this.upcomingSet = this.responseData.feedData;
-        this.upcomingSet = this.upcomingSet.filter(function (item) {
+        this.upcomingSet = this.responseData.feedData.filter(function (item) {
           var itemDate = pipe.transform(item.event_dt, "yyyyMMdd");
           return itemDate > todaysDate;
         });
-        
+
+        this.pastSet = this.responseData.feedData.filter(function (item) {
+          var itemDate = pipe.transform(item.event_dt, "yyyyMMdd");
+          return itemDate < todaysDate;
+        });
+
         this.nothingToday = this.todaySet.length === 0;
         this.nothingUpcoming = this.upcomingSet.length === 0;
+        this.nothingPast = this.pastSet.length === 0;
         
       }
       else
       {
-        console.log("No access on home.ts");
+        console.log("No data is available at this time.");
       }
       
       
